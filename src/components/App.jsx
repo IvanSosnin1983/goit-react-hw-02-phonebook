@@ -35,6 +35,7 @@ export class App extends Component {
     this.setState(prevState => ({
       contacts: prevState.contacts.filter(contact => contact.id !== deleteId),
     }));
+    this.setState({ filter: '' });
   };
   filterChange = evt => {
     const { name, value } = evt.currentTarget;
